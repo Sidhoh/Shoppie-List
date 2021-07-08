@@ -31,9 +31,12 @@ input {
     padding: 7px 0;
     background: transparent;
 }
-li {
+li {    
+    width: max-content;
     font-size: 25px;
     list-style: none;
     text-align: left;
 }
-
+li:hover{
+    background-color: #f0f0f0;
+}
