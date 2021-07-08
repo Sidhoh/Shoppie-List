@@ -1,4 +1,4 @@
-# shopie-list
+# shoppie-list
 
 ## Project setup
 ```
