@@ -3,10 +3,11 @@
   <div class="shopping-list">
     <h1> {{ header }} </h1>
 
-    <input type="text" v-model="newitems" placeholder="Add a new item" v-on:keyup.enter="items.push({id:items.lenght + 1 , newitems }['newitems'])">
+    <input type="text" v-model="newitems" placeholder="Add a new item" v-on:keyup.enter="add(items, newitems)
+    ">
 
     <ul>
-      <li v-for="item in items" :key="item" @click="items.splice(items, 1)">
+      <li v-for="item in items" :key="item" @click="items.splice(items, 1)" id="click">
       
         {{item}}
       </li>
@@ -18,7 +19,12 @@
 
 export default {
   name: 'App',
-  
+  methods: {
+    add(items, newitems){
+      items.push({id:items.lenght + 1 , newitems }['newitems'])
+      this.newitems = ""
+    }
+  },
   data() {
     return {
       header: "Shoppie List 🛒",
