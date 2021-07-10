@@ -17,7 +17,7 @@
     </div>
 
 
-    <h2 class="footer">Made with ❤️, built with vue</h2>
+    <h2 class="footer">Made with ❤️, built with vue<br>Source code is available on <a href="https://github.com/Sidhhh/Shoppie-List">Github</a></h2>
   </div>
 
 </template>
