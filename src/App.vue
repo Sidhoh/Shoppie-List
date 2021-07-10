@@ -1,18 +1,25 @@
 <template> 
 
-  <div class="shopping-list">
-    <h1> {{ header }} </h1>
+  <div>
+    
+    <div class="shopping-list">
+      <h1> {{ header }} </h1>
 
-    <input type="text" v-model="newitems" placeholder="Add a new item" v-on:keyup.enter="add(items, newitems)
+      <input type="text" v-model="newitems" placeholder="Add a new item" v-on:keyup.enter="add(items, newitems)
     ">
+    
+      <ul>
+        <li v-for="item in items" :key="item" @click="items.splice(items, 1)">
+          {{item}}
+        </li>
+      </ul>
+      <p v-if="items == 0">Congo! you bought all the items you listed</p>
+    </div>
 
-    <ul>
-      <li v-for="item in items" :key="item" @click="items.splice(items, 1)">
-      
-        {{item}}
-      </li>
-    </ul>
+
+    <h2 class="footer">Made with ❤️, built with vue</h2>
   </div>
+
 </template>
 
 <script>
