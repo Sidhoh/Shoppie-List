@@ -7,7 +7,7 @@
     ">
 
     <ul>
-      <li v-for="item in items" :key="item" @click="items.splice(items, 1)" id="click">
+      <li v-for="item in items" :key="item" @click="items.splice(items, 1)">
       
         {{item}}
       </li>
