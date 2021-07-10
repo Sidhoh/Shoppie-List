@@ -40,3 +40,6 @@ li {
 li:hover{
     background-color: #f0f0f0;
 }
+#click:hover {
+    color: #ee6880;
+}
